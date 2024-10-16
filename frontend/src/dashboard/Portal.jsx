@@ -203,6 +203,7 @@ function tempAlert2() {
           .then((response) => response.json())
           .then((data) => {
             const { name } = data[0];
+            setCity(name);
             getWeatherDetails(name, latitude, longitude);
           })
           .catch(() => {
